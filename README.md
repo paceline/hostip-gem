@@ -1,6 +1,14 @@
 # Hostip
 
-A simple Ruby Gem wrapper for hostip.info (rewrite of [Philipp Fehre's original verion](http://https://github.com/sideshowcoder/hostip-gem))
+A simple Ruby Gem wrapper for hostip.info (rewrite of [Philipp Fehre's original version](http://https://github.com/sideshowcoder/hostip-gem))
+
+## Install
+
+Put this in your Gemfile
+
+```ruby
+gem 'hostip', git: 'git://github.com/pacueline/hostip-gem.git'
+```
 
 ## Example
 
