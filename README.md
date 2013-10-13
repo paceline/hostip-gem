@@ -1,17 +1,19 @@
-# hostip
+# Hostip
 
-A simple Ruby Gem wrapper for hostip.info
+A simple Ruby Gem wrapper for hostip.info (rewrite of [Philipp Fehre's original verion](http://https://github.com/sideshowcoder/hostip-gem))
 
-Includes a command line tool hostip to get all information from the command line as well
-
-## example
+## Example
 
 ```ruby
 require 'rubygems'
 require 'hostip'
 
-hip = Hostip.new
-	
+# Run without ip parameter to use client IP
+hip = Hostip::Location.new
+
+# Run with ip parameter to use other IP
+hip = Hostip::Location.new(ip: "74.125.77.104")
+
 # get current ip
 hip.ip
 	
@@ -21,17 +23,13 @@ hip.country_name
 hip.country_abbrev
 # get current geo location
 hip.geo_location 
-	
-# all this also works for a given ip like 74.125.77.104 (google.com)
-hip.geo_location "74.125.77.104"
-hip.country_name "74.125.77.104"
 ```
 
-## license 
+## License 
 
 (the BSD license)
 
-Copyright 2010 Philipp Fehre. All rights reserved.
+Copyright 2010 Philipp Fehre / 2013 Ulf Möhring. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are
 permitted provided that the following conditions are met:

@@ -9,7 +9,7 @@ require "ipaddr"
 class HostipTest < Test::Unit::TestCase
   
   def setup
-    @hip = Hostip.new
+    @hip = Hostip::Location.new(ip: "66.102.13.103")
   end
   
   def test_ip
@@ -19,19 +19,19 @@ class HostipTest < Test::Unit::TestCase
   end
   
   def test_country_name
-    assert_equal(@hip.country_name("66.102.13.103"), "UNITED STATES")
+    assert_equal(@hip.country_name, "United States")
   end
   
   def test_country_abbrev
-    assert_equal(@hip.country_abbrev("66.102.13.103"), "US")
+    assert_equal(@hip.country_abbrev, "US")
   end
   
   def test_city
-    assert_equal(@hip.city("66.102.13.103"), "Mountain View, CA")
+    assert_equal(@hip.city, "Mountain View, CA")
   end
   
   def test_geo_location
-    assert_equal(@hip.geo_location("66.102.13.103"), {"lat"=>"37.402", "long"=>"-122.078"})
+    assert_equal(@hip.geo_location, {"lat"=>"37.402", "long"=>"-122.078"})
   end
 
 end
