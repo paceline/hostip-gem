@@ -7,7 +7,7 @@ A simple Ruby Gem wrapper for hostip.info (rewrite of [Philipp Fehre's original 
 Put this in your Gemfile
 
 ```ruby
-gem 'hostip', git: 'git://github.com/pacueline/hostip-gem.git'
+gem 'hostip', git: 'git://github.com/paceline/hostip-gem.git'
 ```
 
 ## Example
